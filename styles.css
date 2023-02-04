@@ -36,27 +36,26 @@ body {
 }
 
 .background {
-    height: 800px;
-    background-image: url(/images/background.jpg);
-    background-repeat: no-repeat;
-    background-size: contain;
+    height: 665px;
+    background: url(./images/lady.png) bottom 0 right 75px, 
+                url(./images/background.jpg);
+    /* background-size: contain; */
+    /* background-size: auto, contain; */
+    background-repeat: no-repeat, no-repeat;
 }
 
-.lady {
-    background-image:url(.images/lady.png);
+/* .lady {
     position: absolute;
-    height: 550px;
-    background-repeat: no-repeat;
-    right: 0;
-    top: 10px;
-    left: 680px;
-}
+    bottom: 130px;
+    right: 100px;
+} */
+
+/* HEADER */
 
 header {
     position: absolute;
     padding-top: 50px;
     width: 100%;
-    align-items: center;
 }
 
 .flex-box {
@@ -98,12 +97,10 @@ nav a {
     font-weight: 600;
 }
 
+/* MAIN */
+
 .info {
-    display: flex;
-    position: absolute;
-    margin-top: 150px;
-    padding-left: 120px;
-    flex-direction: column;
+    padding-top: 150px;
 }
 
 h1 {
@@ -153,14 +150,20 @@ h1 span {
     font-size: 15px;
 }
 
+/* 3 BLOCKS */
+
 .blocks {
     display: grid;
     justify-items: center;
+    position: absolute;
+    bottom: 105px;
+    left: 50%;
+    transform: translate(-50%, 0);
 }
 
 .blocks-inline {
     display: flex;
-    margin-top: 560px;
+    bottom: 0;
     box-sizing: border-box;
     gap: 60px;
 }
@@ -205,8 +208,11 @@ h1 span {
     padding-top: 15px;
 }
 
+/* MIDDLE WITH BLOCKS */
+
 .middle {
     text-align: center;
+    margin-top: 100px;
 }
 
 .middle span {
@@ -214,32 +220,26 @@ h1 span {
 }
 
 .info-block {
-    position: absolute;
+    display: flex;
     background: var(--blue-gray);
     border-radius: 12px;
-    width: 995px;
-    height: 410px;
-    margin-top: 250px;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    width: fit-content;
+    margin: 50px auto;
 }
 
 .grid-boxes {
     display: grid;
     align-items: center;
     grid-template-columns: repeat(3, 250px);
-    column-gap: 80px;
+    gap: 20px;
     grid-template-rows: 1fr 1fr;
     grid-auto-flow: column;
+    padding: 20px;
 }
 
 .box {
     height: 150px;
-    width: 250px;
     padding: 20px;
-    margin-top: 20px;
-    margin-left: 20px;
     background-color: var(--white);
     padding-top: 5px;
     border-radius: 8px;
@@ -259,6 +259,8 @@ h1 span {
     padding-left: 10px;
     padding-top: 10px;
     font-weight: 700;
+    font-size: 13px;
+    line-height: 21px;
 }
 
 .small-text {
@@ -266,19 +268,21 @@ h1 span {
     font-size: 14px;
 }
 
+/* LOG IN FRAME */
+
+.appointment-frame h2{
+    padding-top: 15px;
+}
+
 .appointment {
     background: var(--white);
     display: flex;
     justify-content: center;
-    position: absolute;
     height: 250px;
     width: 800px;
     border: 1px solid var(--light-gray);
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-    margin-top: 650px; 
-    left: 50%; 
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
+    margin: 100px auto; 
     border-radius: 8px;
 }
 
@@ -307,7 +311,7 @@ h1 span {
     border: 1px solid var(--light-gray);
     text-align: center;
     margin-left: 5px;
-    background-image: url(./user-icon.svg), url(./images/svg/line.svg);   
+    background-image: url(./images/user-icon.svg), url(./images/line.svg);   
     background-repeat: no-repeat;   
     background-position: 10px, 40px;
 }
@@ -320,9 +324,9 @@ h1 span {
     border: 1px solid var(--light-gray);
     text-align: center;
     margin-left: 5px;
-    background-image: url(./images/svg/header-phone.svg), url(./images/svg/line.svg);   
+    background-image: url(./images/login_phone.svg), url(./images/line.svg);
     background-repeat: no-repeat;   
-    background-position: 10px, 35px;
+    background-position: 10px, 34px;
 }
 
 .signUp {
@@ -340,51 +344,43 @@ h1 span {
     text-decoration: none;
 }
 
+/* PHOTOS BLOCK */
+
 .photos {
     display: flex;
-    position: absolute;
-    margin-top: 900px;
-    left: 50%;
-    margin-right: -50%;
-    transform: translate(-50%, -50%);
-    gap: 70px;
+    justify-content: center;
+    gap: 50px;
 }
 
+/* FOOTER */
+
 .gradient {
-    display: flex;
-    position: absolute;
-    justify-content: space-between;
     background: linear-gradient(90deg, rgba(170,211,237,1) 23%, 
     rgba(33,131,194,1) 60%, rgba(26,130,196,1) 60%);
-    width: 100%;
-    height: 400px;
-    margin-top: 80%;
+    background-size: contain;
+    margin-top: 100px;
+}
+.footer-info {
+    display: flex;
+    justify-content: space-between;
+    padding-top: 50px;
 }
 
 .left-side {
-    display: flex;
-    flex-direction: column;
-    margin-left: 100px;
+    width: fit-content;
 }
 
 .tooth {
     display: flex;
-    width: 300px;
-    margin-left: 10px;
-    padding-top: 40px;
-}
-
-.tooth-box img {
-    height: 70px;
-    margin-top: 20px;
 }
 
 .tooth h2 {
     display: flex;
     font-family: "SofiaSans";
     color: var(--dark-blue);
-    font-size: 25px;
+    font-size: 30px;
     flex-direction: column;
+    width: fit-content;
     padding-left: 5px;
 }
 
@@ -394,9 +390,7 @@ h2 span {
 
 .navigation-footer {
     flex-direction: column;
-    padding-left: 10px;
     gap: 20px;
-    width: 100px;
 }
 
 .navigation-footer span {
@@ -405,13 +399,15 @@ h2 span {
 
 .middle-left {
     display: flex;
-    margin-top: 50px;
+    padding-top: 50px;
+    justify-content: space-between;
+    font-size: 20px;
 }
 
 .work-time {
     display: flex;
-    margin-left: 100px;
-    margin-top: 10px;
+    padding-left: 100px;
+    padding-top: 10px;
 }
 
 .work-time span {
@@ -422,55 +418,25 @@ h2 span {
     color: var(--white);
     display: flex;
     flex-direction: column;
-    margin-right: 150px;
-    margin-top: 40px;
-    column-gap: 15px;
+    gap: 15px;
+    justify-items: center;
 }
 
-.footer-phone {
+.right-side h2 {
+    font-size: 30px;
+}
+
+.right-side span {
+    font-size: 20px;
+}
+
+.position {
     display: flex;
-}
-
-.footer-phone span {
-    display: flex;
-    padding-left: 10px;
-    padding-top: 3px;
-}
-
-.footer-messangers {
-    display: flex;
-    gap: 20px;
-}
-
-.insta-id {
-    display: flex;
-}
-
-.insta-id svg {
-    margin-top: -5px;
-    color: var(--blue);
-}
-
-.insta-id span {
-    padding-left: 10px;
-    margin-top: -2px;
-}
-
-.email-name {
-    display: flex;
-    margin-top: 15px;
-}
-
-.email-name span {
-    margin-top: 3px;
-    margin-left: 5px;
-}
-
-.copyright {
-    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 small{
-    margin-top: 15px;
-    margin-left: 150px;
+    padding-top: 15px;
+    padding-left: 150px;
 }
