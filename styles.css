@@ -298,6 +298,7 @@ h1 span {
     .grid-boxes{
         gap: 0;
         grid-template-rows: repeat(6, 190px);
+        grid-template-columns: none;
     }
 
     .big-text {
