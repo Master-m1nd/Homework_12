@@ -310,5 +310,114 @@ h1 span {
     }
 }
 
-   
+@media (max-width: 480px) {
+    /* HEADER */
+    header {
+        padding-top: 20px;
+    }
+
+    .logo {
+        width: 180px;
+    }
+
+    .logo-box {
+        height: 40px;
+        width: 40px;
+    }
+    .text-logo {
+        font-size: 14px;
+    }
+
+    .phone a {
+        font-size: 12px;
+    }
+
+    nav {
+        display: none;
+    }
+
+    /* BGD POSITION */
+
+    .background {
+        background-position: bottom center;
+        background-size: 35vh , cover;
+    }
+    
+    /* INFO BLOCKS */
+    .info {
+        padding-top: 60px;
+    }
+
+    .info h1 {
+        font-size: 17px;
+        text-align: center;
+    }
+
+    .paragraph{
+        font-size: 12px;
+        text-align: center;
+    }
+
+    .bottoms {
+        justify-content: center;
+        gap: 115px;
+    }
+
+    .bottom-position {
+        height: 30px;
+        width: 80px;
+        margin-top: 10px;
+        border-radius: 6px;
+        font-size: 12px;
+    }
+
+    /* MIDDLE AND INFO BLOCKS*/
+
+    .middle {
+        margin-top: 60px;
+    }
+
+    .middle h2 {
+        font-size: 16px;
+    }
+
+    .middle p {
+        font-size: 12px;
+    }
+
+    .info-block {
+        width: fit-content;
+        margin: 25px auto;
+        border-radius: 8px;
+    }
+
+    .grid-boxes {
+        grid-template-rows: repeat(6, 175px);
+        padding: 0px 10px;
+    }
+
+    .box {
+        width: 185px;
+        height: 135px;
+    }
+
+    .number {
+        font-size: 35px;
+    }
+
+    .big-text {
+        font-size: 12px;
+        line-height: normal;
+    }
+
+    .small-text {
+        font-size: 12px;
+    }
+
+    .head-box {
+        padding-bottom: 10px;
+    }
+
+
+}
     
